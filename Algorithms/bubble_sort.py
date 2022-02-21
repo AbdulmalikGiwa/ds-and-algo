@@ -25,17 +25,20 @@ def check_duplicate_value(numbers: list):
 
 
 def greatest_number(array):
+    """
+    Non-optimal soln
+    """
     for i in array:
         # Assume for now that i is the greatest:
-        isIValTheGreatest = True
+        is_i_val_greatest = True
 
         for j in array:
             # If we find another value that is greater than i, # i is not the greatest:
             if j > i:
-                isIValTheGreatest = False
+                is_i_val_greatest = False
         # If, by the time we checked all the other numbers, i
         # is still the greatest, it means that i is the greatest number:
-        if isIValTheGreatest:
+        if is_i_val_greatest:
             return i
 
 
